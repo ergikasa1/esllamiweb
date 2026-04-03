@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>@savannah ambrossio — Unfiltered Creator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- GRAIN OVERLAY -->
+  <div class="grain"></div>
+
+  <!-- MAIN CONTAINER -->
+  <main class="profile-page">
+
+    <!-- HEADER: avatar + username -->
+    <header class="profile-header fade-in" style="--delay: 0s">
+  <div class="avatar-wrap">
+    <img
+      src="img1.jpeg"
+      alt="Profile avatar"
+      class="avatar"
+    />
+    <span class="avatar-ring"></span>
+  </div>
+
+  <div class="profile-title">
+    <h1 class="username">
+      Savvannah Ambrossio
+      <span class="verified-badge">
+        <svg viewBox="0 0 24 24">
+          <path fill="#1DA1F2" d="M22.5 12l-2.2-2.5.3-3.3-3.2-.7-1.7-2.9-3.2 1.4-3.2-1.4-1.7 2.9-3.2.7.3 3.3L1.5 12l2.2 2.5-.3 3.3 3.2.7 1.7 2.9 3.2-1.4 3.2 1.4 1.7-2.9 3.2-.7-.3-3.3L22.5 12z"/>
+          <path fill="#fff" d="M10 14.5l-2-2 1.4-1.4L10 11.7l4.6-4.6L16 8.5z"/>
+        </svg>
+      </span>
+    </h1>
+
+    <p class="handle">@savannahambrossio · Creator</p>
+  </div>
+</header>
+
+    <!-- BIO -->
+    <section class="bio fade-in" style="--delay: 0.1s">
+      <p>Not for everyone. Only the ones who can handle me.</p>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats fade-in" style="--delay: 0.2s">
+      <div class="stat">
+        <span class="stat-num">400<sup>+</sup></span>
+        <span class="stat-label">Videos</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">515<sup>+</sup></span>
+        <span class="stat-label">Photos</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">67K</span>
+        <span class="stat-label">Followers</span>
+      </div>
+    </section>
+
+    <!-- PLATFORM BADGE + CREATOR SPACE LOGO -->
+    
+        <!-- LOGO VENDOSUR KETU - brenda platform-badge -->
+        <img src="logo.png" alt="Creator Space Official" class="creator-logo-img" id="logoModalBtn" />
+      </div>
+    </section>
+
+    <!-- BUTTONS: explicit content + Live stream (both open modal) -->
+    <section class="actions fade-in" style="--delay: 0.4s">
+      <button class="btn btn-primary" id="openModalBtn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 5v14M5 12l7 7 7-7"/>
+        </svg>
+        Explicit Content!
+      </button>
+      <button class="btn btn-secondary" id="liveStreamModalBtn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+          <polyline points="15 3 21 3 21 9"/>
+          <line x1="10" y1="14" x2="21" y2="3"/>
+        </svg>
+        +18 Live Stream!
+      </button>
+    </section>
+
+    <!-- CAROUSEL - 8 FOTO -->
+    <section class="carousel-wrap fade-in" style="--delay: 0.5s">
+      <h2 class="section-label">just me</h2>
+      <div class="carousel" id="carousel">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-slide"><img src="img1.jpeg" alt="Work 1" loading="lazy"/><div class="slide-overlay"><span></span></div></div>
+          <div class="carousel-slide"><img src="img22.jpeg" alt="Work 2" loading="lazy"/><div class="slide-overlay"><span></span></div></div>
+          <div class="carousel-slide"><img src="img3.jpeg" alt="Work 3" loading="lazy"/><div class="slide-overlay"><span></span></div></div>
+          <div class="carousel-slide"><img src="img4.jpeg" alt="Work 4" loading="lazy"/><div class="slide-overlay"><span></span></div></div>
+          <div class="carousel-slide"><img src="img5.jpeg" alt="Work 5" loading="lazy"/><div class="slide-overlay"><span></span></div></div>
+          <div class="carousel-slide"><img src="img6.jpeg" alt="Work 6" loading="lazy"/><div class="slide-overlay"><span></span></div></div>
+          <div class="carousel-slide"><img src="img7.jpeg" alt="Work 7" loading="lazy"/><div class="slide-overlay"><span></span></div></div>
+          <div class="carousel-slide"><img src="img8.jpeg" alt="Work 8" loading="lazy"/><div class="slide-overlay"><span></span></div></div>
+        </div>
+      </div>
+      <div class="carousel-dots" id="carouselDots"></div>
+    </section>
+
+  </main>
+
+  <!-- STICKY BOTTOM BUTTON -->
+  <div class="sticky-bar" id="stickyBar">
+    <button class="btn btn-primary btn-sticky" id="stickyBtn">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+      Join Now — Free
+    </button>
+  </div>
+
+  <!-- MODAL (access instructions) -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="closeModal" aria-label="Close modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <div class="modal-badge">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+      </div>
+      <h2 class="modal-title" id="modalTitle">How to Get Access</h2>
+      <p class="modal-subtitle">Three simple steps to unlock the full content library.</p>
+      <ol class="steps">
+        <li class="step">
+          <span class="step-num">01</span>
+          <div class="step-body">
+            <strong>Create your free account</strong>
+            <p>Sign up on jerkmate using your email. No credit card required to get started.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-num">02</span>
+          <div class="step-body">
+            <strong>Follow and subscribe</strong>
+            <p>Search my username <em>@savannahambrossio</em> and hit follow — instant previews unlocked.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-num">03</span>
+          <div class="step-body">
+            <strong>Browse &amp; enjoy</strong>
+            <p>Access 500+ videos and 600+ photos instantly, organized by series and date.</p>
+          </div>
+        </li>
+      </ol>
+      <a href="https://t.ajrkmx1.com/360654/8780/0?bo=2779,2778,2777,2776,2775&source=ES&po=6533&aff_sub5=SF_006OG000004lmDN" target="_blank" rel="noopener" class="btn btn-primary btn-full">Join for Free →</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
