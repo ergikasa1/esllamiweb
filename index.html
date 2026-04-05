@@ -2,168 +2,346 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>@savannah ambrossio — Unfiltered Creator</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-  <!-- GRAIN OVERLAY -->
-  <div class="grain"></div>
-
-  <!-- MAIN CONTAINER -->
-  <main class="profile-page">
-
-    <!-- HEADER: avatar + username -->
-    <header class="profile-header fade-in" style="--delay: 0s">
-  <div class="avatar-wrap">
-    <img
-      src="img1.jpeg"
-      alt="Profile avatar"
-      class="avatar"
-    />
-    <span class="avatar-ring"></span>
-  </div>
-
-  <div class="profile-title">
-    <h1 class="username">
-      Savvannah Ambrossio
-      <span class="verified-badge">
-        <svg viewBox="0 0 24 24">
-          <path fill="#1DA1F2" d="M22.5 12l-2.2-2.5.3-3.3-3.2-.7-1.7-2.9-3.2 1.4-3.2-1.4-1.7 2.9-3.2.7.3 3.3L1.5 12l2.2 2.5-.3 3.3 3.2.7 1.7 2.9 3.2-1.4 3.2 1.4 1.7-2.9 3.2-.7-.3-3.3L22.5 12z"/>
-          <path fill="#fff" d="M10 14.5l-2-2 1.4-1.4L10 11.7l4.6-4.6L16 8.5z"/>
-        </svg>
-      </span>
-    </h1>
-
-    <p class="handle">@savannahambrossio · Creator</p>
-  </div>
-</header>
-
-    <!-- BIO -->
-    <section class="bio fade-in" style="--delay: 0.1s">
-      <p>Not for everyone. Only the ones who can handle me.</p>
-    </section>
-
-    <!-- STATS -->
-    <section class="stats fade-in" style="--delay: 0.2s">
-      <div class="stat">
-        <span class="stat-num">400<sup>+</sup></span>
-        <span class="stat-label">Videos</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat">
-        <span class="stat-num">515<sup>+</sup></span>
-        <span class="stat-label">Photos</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat">
-        <span class="stat-num">67K</span>
-        <span class="stat-label">Followers</span>
-      </div>
-    </section>
-
-    <!-- PLATFORM BADGE + CREATOR SPACE LOGO -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>Private Live Access</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+  <style>
+    :root {
+      --primary: #ff2e63;
+    }
     
-        <!-- LOGO VENDOSUR KETU - brenda platform-badge -->
-        <img src="logo.png" alt="Creator Space Official" class="creator-logo-img" id="logoModalBtn" />
+    body {
+      background: linear-gradient(180deg, #0a0a0a 0%, #121212 100%);
+      color: white;
+      font-family: system-ui, -apple-system, sans-serif;
+      overscroll-behavior: none;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .live-dot {
+      animation: livePulse 1.8s infinite ease-in-out;
+    }
+
+    @keyframes livePulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .gallery-img {
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .gallery-img:hover {
+      transform: scale(1.12);
+    }
+
+    .mobile-safe {
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .cta-button {
+      transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    }
+    
+    .cta-button:active {
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+<body class="min-h-screen pb-24 mobile-safe">
+
+  <div class="h-11 bg-black"></div>
+
+  <header class="bg-black/90 backdrop-blur-lg border-b border-white/10 sticky top-0 z-50">
+    <div class="max-w-xl mx-auto px-5 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 bg-gradient-to-br from-pink-500 to-rose-600 rounded-2xl flex items-center justify-center text-sm font-bold">🔥</div>
+        <h1 class="font-bold text-2xl tracking-tighter">Iben Haastrup</h1>
       </div>
-    </section>
+      <div class="flex items-center gap-2 bg-green-500/10 text-green-400 px-4 py-1.5 rounded-3xl text-sm font-medium">
+        <div class="w-2.5 h-2.5 bg-green-500 rounded-full live-dot"></div>
+        LIVE
+      </div>
+    </div>
+  </header>
 
-    <!-- BUTTONS: explicit content + Live stream (both open modal) -->
-    <section class="actions fade-in" style="--delay: 0.4s">
-      <button class="btn btn-primary" id="openModalBtn">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 5v14M5 12l7 7 7-7"/>
-        </svg>
-        Explicit Content!
-      </button>
-      <button class="btn btn-secondary" id="liveStreamModalBtn">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-          <polyline points="15 3 21 3 21 9"/>
-          <line x1="10" y1="14" x2="21" y2="3"/>
-        </svg>
-        +18 Live Stream!
-      </button>
-    </section>
-
-    <!-- CAROUSEL - 8 FOTO -->
-    <section class="carousel-wrap fade-in" style="--delay: 0.5s">
-      <h2 class="section-label">just me</h2>
-      <div class="carousel" id="carousel">
-        <div class="carousel-track" id="carouselTrack">
-          <div class="carousel-slide"><img src="img1.jpeg" alt="Work 1" loading="lazy"/><div class="slide-overlay"><span></span></div></div>
-          <div class="carousel-slide"><img src="img22.jpeg" alt="Work 2" loading="lazy"/><div class="slide-overlay"><span></span></div></div>
-          <div class="carousel-slide"><img src="img3.jpeg" alt="Work 3" loading="lazy"/><div class="slide-overlay"><span></span></div></div>
-          <div class="carousel-slide"><img src="img4.jpeg" alt="Work 4" loading="lazy"/><div class="slide-overlay"><span></span></div></div>
-          <div class="carousel-slide"><img src="img5.jpeg" alt="Work 5" loading="lazy"/><div class="slide-overlay"><span></span></div></div>
-          <div class="carousel-slide"><img src="img6.jpeg" alt="Work 6" loading="lazy"/><div class="slide-overlay"><span></span></div></div>
-          <div class="carousel-slide"><img src="img7.jpeg" alt="Work 7" loading="lazy"/><div class="slide-overlay"><span></span></div></div>
-          <div class="carousel-slide"><img src="img8.jpeg" alt="Work 8" loading="lazy"/><div class="slide-overlay"><span></span></div></div>
+  <div class="max-w-xl mx-auto px-5 pt-8 pb-6">
+    <div class="flex gap-5 items-center">
+      <div class="relative flex-shrink-0">
+        <img src="/es22.jpeg" alt="favgirl" 
+             class="w-28 h-28 rounded-3xl object-cover border-4 border-[#ff2e63] shadow-xl"/>
+        <div class="absolute -bottom-1 -right-1 bg-green-500 text-[10px] font-bold px-3 py-1 rounded-2xl shadow-md">
+          ONLINE
         </div>
       </div>
-      <div class="carousel-dots" id="carouselDots"></div>
-    </section>
-
-  </main>
-
-  <!-- STICKY BOTTOM BUTTON -->
-  <div class="sticky-bar" id="stickyBar">
-    <button class="btn btn-primary btn-sticky" id="stickyBtn">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M12 5v14M5 12l7 7 7-7"/>
-      </svg>
-      Join Now — Free
-    </button>
-  </div>
-
-  <!-- MODAL (access instructions) -->
-  <div class="modal-backdrop" id="modalBackdrop">
-    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <button class="modal-close" id="closeModal" aria-label="Close modal">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-          <line x1="18" y1="6" x2="6" y2="18"/>
-          <line x1="6" y1="6" x2="18" y2="18"/>
-        </svg>
-      </button>
-      <div class="modal-badge">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="20 6 9 17 4 12"/>
-        </svg>
+      
+      <div class="flex-1 min-w-0">
+        <div class="flex items-center gap-2">
+          <h2 class="text-4xl font-bold truncate">Iben Haastrup</h2>
+          <i class="fa-solid fa-circle-check text-3xl text-blue-500"></i>
+        </div>
+        <p class="text-pink-400 text-xl">@Iben Haastrup</p>
+        <p class="text-gray-300 text-[15px] leading-tight mt-2 line-clamp-2">
+          I go live every night… only for selected users 💋
+        </p>
       </div>
-      <h2 class="modal-title" id="modalTitle">How to Get Access</h2>
-      <p class="modal-subtitle">Three simple steps to unlock the full content library.</p>
-      <ol class="steps">
-        <li class="step">
-          <span class="step-num">01</span>
-          <div class="step-body">
-            <strong>Create your free account</strong>
-            <p>Sign up on jerkmate using your email. No credit card required to get started.</p>
-          </div>
-        </li>
-        <li class="step">
-          <span class="step-num">02</span>
-          <div class="step-body">
-            <strong>Follow and subscribe</strong>
-            <p>Search my username <em>@savannahambrossio</em> and hit follow — instant previews unlocked.</p>
-          </div>
-        </li>
-        <li class="step">
-          <span class="step-num">03</span>
-          <div class="step-body">
-            <strong>Browse &amp; enjoy</strong>
-            <p>Access 500+ videos and 600+ photos instantly, organized by series and date.</p>
-          </div>
-        </li>
-      </ol>
-      <a href="https://t.ajrkmx1.com/360654/8780/0?bo=2779,2778,2777,2776,2775&source=ES&po=6533&aff_sub5=SF_006OG000004lmDN" target="_blank" rel="noopener" class="btn btn-primary btn-full">Join for Free →</a>
+    </div>
+
+    <div class="grid grid-cols-3 gap-4 mt-10 bg-zinc-900/70 rounded-3xl p-5 text-center">
+      <div>
+        <p class="text-3xl font-mono font-bold">128</p>
+        <p class="text-xs text-gray-400 mt-1">POSTS</p>
+      </div>
+      <div>
+        <p class="text-3xl font-mono font-bold">34.2K</p>
+        <p class="text-xs text-gray-400 mt-1">FOLLOWERS</p>
+      </div>
+      <div>
+        <p class="text-3xl font-mono font-bold text-green-400">187</p>
+        <p class="text-xs text-gray-400 mt-1">WATCHING</p>
+      </div>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <div class="max-w-xl mx-auto px-5 text-center">
+    <h1 class="text-5xl font-bold leading-none mb-3">Private Live Show 🔥</h1>
+    <p class="text-xl text-gray-300 mb-10">You’ve been invited to watch exclusive content</p>
+    
+    <div class="flex flex-col gap-4">
+      <button onclick="openPopup()" 
+              class="cta-button bg-[#ff2e63] hover:bg-pink-600 text-white font-semibold text-2xl py-7 rounded-3xl shadow-2xl shadow-pink-600/40">
+        Watch Now
+      </button>
+      
+      <button onclick="openPopup()" 
+              class="cta-button border-2 border-white/60 hover:bg-white/10 font-semibold text-2xl py-7 rounded-3xl">
+        Unlock Full Access
+      </button>
+    </div>
+  </div>
+
+  <div class="max-w-xl mx-auto px-5 mt-10">
+    <div class="bg-gradient-to-r from-rose-600 via-pink-600 to-rose-600 rounded-3xl py-4 px-6 flex items-center justify-between text-sm font-medium shadow-xl">
+      <div class="flex items-center gap-2">
+        <i class="fa-solid fa-users text-white"></i>
+        <span>187 users watching right now</span>
+      </div>
+      <div class="flex items-center gap-2 bg-black/30 px-5 py-1 rounded-2xl">
+        <i class="fa-solid fa-clock"></i>
+        <span id="countdown" class="font-mono font-bold">05:00</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-xl mx-auto px-5 mt-12">
+    <h3 class="font-semibold text-xl mb-6 px-1">Sneak Peek 👀</h3>
+    <div class="grid grid-cols-2 gap-4" id="gallery">
+    </div>
+  </div>
+
+  <div class="max-w-xl mx-auto px-5 mt-14 space-y-6">
+    <div onclick="openPopup()" 
+         class="glass border border-white/10 rounded-3xl p-7 cursor-pointer active:scale-[0.98]">
+      <h4 class="text-2xl font-bold mb-2">Limited Free Access</h4>
+      <p class="text-gray-300 text-[15px]">Only a few spots left. Join before it closes.</p>
+      <button class="mt-6 w-full bg-white text-black font-semibold py-4 rounded-2xl text-lg">
+        Get Free Access
+      </button>
+    </div>
+
+    <div onclick="openPopup()" 
+         class="glass border border-[#ff2e63]/30 bg-gradient-to-br from-zinc-950 to-black rounded-3xl p-7 cursor-pointer active:scale-[0.98]">
+      <h4 class="text-2xl font-bold mb-2">She is Live Right Now</h4>
+      <p class="text-gray-300 text-[15px]">Don’t miss it. People are joining right now.</p>
+      <button class="mt-6 w-full bg-[#ff2e63] font-semibold py-4 rounded-2xl text-lg">
+        Join Live Stream
+      </button>
+    </div>
+  </div>
+
+  <div class="max-w-xl mx-auto px-5 mt-16">
+    <h3 class="font-semibold text-xl mb-6 px-1">Real Members</h3>
+    <div class="space-y-6">
+      <div class="glass border border-white/10 rounded-3xl p-6">
+        <p class="italic text-gray-200">"Didn’t expect this… she actually replied 😳"</p>
+        <p class="mt-4 text-sm font-medium">— Mike</p>
+      </div>
+      <div class="glass border border-white/10 rounded-3xl p-6">
+        <p class="italic text-gray-200">"Way better than other sites 🔥"</p>
+        <p class="mt-4 text-sm font-medium">— Chris</p>
+      </div>
+      <div class="glass border border-white/10 rounded-3xl p-6">
+        <p class="italic text-gray-200">"Worth it. No scam."</p>
+        <p class="mt-4 text-sm font-medium">— Daniel</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="max-w-xl mx-auto px-5 py-12 text-center text-xs text-gray-500 mt-20">
+    <p class="mb-6">This is a promotional page. Must be 18+.<br>Adults only.</p>
+    <div class="flex justify-center gap-8">
+      <a href="#" class="hover:text-gray-300">Privacy</a>
+      <a href="#" class="hover:text-gray-300">Terms</a>
+    </div>
+  </footer>
+
+  <div id="main-popup" class="hidden fixed inset-0 bg-black/95 z-[200] flex items-end md:items-center justify-center">
+    <div class="glass border border-[#ff2e63]/30 w-full max-w-xl md:max-w-lg rounded-t-3xl md:rounded-3xl p-8 md:p-10">
+      <div class="flex justify-between items-center mb-8">
+        <h2 class="text-3xl font-bold">Get Started 🔓</h2>
+        <button onclick="closePopup()" class="text-gray-400 hover:text-white">
+          <i class="fa-solid fa-xmark text-3xl"></i>
+        </button>
+      </div>
+
+      <div class="space-y-8 mb-10">
+        <div class="flex gap-6">
+          <div class="w-10 h-10 rounded-2xl bg-[#ff2e63] flex items-center justify-center font-bold text-2xl flex-shrink-0">1</div>
+          <div class="pt-1 text-[17px] leading-tight">Register for free (no card required)</div>
+        </div>
+        <div class="flex gap-6">
+          <div class="w-10 h-10 rounded-2xl bg-[#ff2e63] flex items-center justify-center font-bold text-2xl flex-shrink-0">2</div>
+          <div class="pt-1 text-[17px] leading-tight">Confirm your email</div>
+        </div>
+        <div class="flex gap-6">
+          <div class="w-10 h-10 rounded-2xl bg-[#ff2e63] flex items-center justify-center font-bold text-2xl flex-shrink-0">3</div>
+          <div class="pt-1 text-[17px] leading-tight">Enjoy the things</div>
+        </div>
+      </div>
+
+      <button onclick="goToSmartlink()" 
+              class="w-full bg-[#ff2e63] hover:bg-pink-600 py-7 text-2xl font-bold rounded-3xl transition-all active:scale-95">
+        Get Started
+      </button>
+
+      <button onclick="closePopup()" 
+              class="block mx-auto mt-6 text-gray-400 text-sm">
+        Close
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const SMARTLINK_URL = "https://t.ajrkmx1.com/360654/8780/0?bo=2779,2778,2777,2776,2775&source=es&po=6533&aff_sub5=SF_006OG000004lmDN";
+    
+    function openPopup() {
+      const popup = document.getElementById('main-popup');
+      popup.classList.remove('hidden');
+      popup.classList.add('flex');
+    }
+
+    function closePopup() {
+      const popup = document.getElementById('main-popup');
+      popup.classList.add('hidden');
+      popup.classList.remove('flex');
+    }
+
+    function goToSmartlink() {
+      window.open(SMARTLINK_URL, '_blank');
+    }
+
+    function renderGallery() {
+      const container = document.getElementById('gallery');
+      const images = [
+        "/images/post1.jpg", "/images/post2.jpg",
+        "/images/post3.jpg", "/images/post4.jpg"
+      ];
+
+      container.innerHTML = images.map(src => `
+        <div onclick="openPopup()" class="relative overflow-hidden rounded-3xl aspect-square cursor-pointer shadow-inner">
+          <img src="${src}" alt="Preview" class="gallery-img w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x400/2a2a2a/ff2e63?text=Hot+Preview';"/>
+          <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/70"></div>
+          <div class="absolute bottom-4 left-4 text-white text-sm font-medium flex items-center gap-2">
+            <i class="fa-solid fa-lock"></i> Locked
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function startCountdown() {
+      let time = 300;
+      const countdownEl = document.getElementById('countdown');
+      if (!countdownEl) return;
+
+      setInterval(() => {
+        if (time <= 0) return;
+        time--;
+        const min = Math.floor(time / 60);
+        const sec = time % 60;
+        countdownEl.textContent = `${min}:${sec < 10 ? '0' : ''}${sec}`;
+      }, 1000);
+    }
+
+    function setupGlobalPopupTrigger() {
+      document.body.addEventListener('click', function(event) {
+        const isInsidePopup = event.target.closest('#main-popup');
+        if (isInsidePopup) {
+          return;
+        }
+        
+        const isInsideFooter = event.target.closest('footer');
+        if (isInsideFooter) {
+          return;
+        }
+        
+        let isClickable = false;
+        if (event.target.tagName === 'BUTTON' || (event.target.closest && event.target.closest('button'))) {
+          isClickable = true;
+        }
+        else if (event.target.closest && (event.target.closest('.cta-button') || event.target.closest('.cursor-pointer') || event.target.closest('[onclick*="openPopup"]'))) {
+          isClickable = true;
+        }
+        else if (event.target.closest && event.target.closest('[onclick="openPopup()"]')) {
+          isClickable = true;
+        }
+        
+        if (event.target.closest && event.target.closest('a') && !event.target.closest('[onclick]')) {
+          const anchor = event.target.closest('a');
+          if (anchor && anchor.getAttribute('href') && !anchor.hasAttribute('onclick')) {
+            return;
+          }
+        }
+        
+        if (isClickable) {
+          const popup = document.getElementById('main-popup');
+          if (popup && popup.classList.contains('hidden')) {
+            openPopup();
+          }
+        }
+      });
+    }
+    
+    function enhanceImages() {
+      const imgs = document.querySelectorAll('img');
+      imgs.forEach(img => {
+        img.onerror = function() {
+          if (!this.dataset.fallback) {
+            this.dataset.fallback = 'true';
+            this.src = 'https://placehold.co/400x400/2a2a2a/ff2e63?text=Exclusive';
+          }
+        };
+      });
+    }
+    
+    function init() {
+      renderGallery();
+      startCountdown();
+      enhanceImages();
+      setupGlobalPopupTrigger();
+      
+      const avatar = document.querySelector('img[alt="Alyssa"]');
+      if (avatar && !avatar.complete) {
+        avatar.onerror = () => { avatar.src = 'https://placehold.co/112x112/ff2e63/white?text=A'; };
+      }
+    }
+    
+    window.onload = init;
+  </script>
 </body>
 </html>
